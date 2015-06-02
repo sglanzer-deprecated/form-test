@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'form-test',
+    podModulePrefix: 'form-test/pods',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',

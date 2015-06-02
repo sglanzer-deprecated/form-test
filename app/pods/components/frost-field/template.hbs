@@ -1,0 +1,9 @@
+{{#if template}}
+    {{yield fieldModel}}
+{{else}}
+    <label class="label" for={{fieldId}}>{{fieldModel.alias}}</label>
+    {{frost-checkbox id=fieldModel.id}}
+    {{#if fieldModel.error}}
+        <span class="error">{{fieldModel.error}}</span>
+    {{/if}}
+{{/if}}

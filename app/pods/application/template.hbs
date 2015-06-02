@@ -1,0 +1,17 @@
+{{frost-field model=form.checkboxA}}
+
+{{#frost-field model=form.checkboxB as |model|}}
+    <label class="label" for={{model.id}}>Super cool alias! {{model.alias}}</label>
+    {{frost-checkbox id=model.id classNames='custom'}}
+    <span class="error">Omnipresent error =( {{model.error}}</span>
+{{/frost-field}}
+
+{{#unless form.text.hidden}}
+    <div class="field">
+        <label class="label" for="form.text">Text</label>
+        <input id='form.text' class="input" type="text"/>
+        {{#if form.text.error}}
+            <span class="error">{{form.text.error}}</span>
+        {{/if}}
+    </div>
+{{/unless}}
